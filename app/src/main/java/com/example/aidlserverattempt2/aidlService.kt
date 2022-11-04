@@ -5,7 +5,7 @@ import android.content.Intent
 import android.os.IBinder
 import android.util.Log
 
-class MyService() : Service() {
+class aidlService() : Service() {
 
 
     lateinit var mainActivity: MainActivity
@@ -15,8 +15,8 @@ class MyService() : Service() {
     }
 
 
-    private val binder: IMyAidlInterface.Stub = object : IMyAidlInterface.Stub() {
-        override fun getColor(): String {
+    private val binder: IAidlInterface.Stub = object : IAidlInterface.Stub() {
+        override fun sendStr(): String {
             val str = mainActivity.string
             Log.d("SERVER", "$str")
             return str

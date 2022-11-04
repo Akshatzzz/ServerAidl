@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     var string: String = str
     lateinit var btn: Button
     lateinit var etText: EditText
-    lateinit var myService: MyService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun initialize() {
-//        str = "Hello From Server"
         btn = findViewById(R.id.SEND)
         etText = findViewById(R.id.etEnter)
 
